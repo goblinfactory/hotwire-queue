@@ -22,7 +22,7 @@ config.Ensure(c => c.Active,
               c => c.Endpoints != null && c.Endpoints.Count() == 2);
 }}}
 
-QuickAssert also fails (if error is detected) with the text representation of the exact code used to check the property, without having to provide a string description. This is not a replacement for  Fluent assertions, which will do a better job of expressing very complex requirements. This is for when I need something simple, e.g. checking long lists of properties.
+QuickAssert also fails (if error is detected) with the text representation of the exact code used to check the property, without having to provide a string description. This is not a replacement for  Fluent assertions, which will do a better job of expressing very complex requirements. This is for when I need something simple, e.g. checking long lists of properties. I may simply be using Fluent Assertions properly, so please send me comments if there is a better way to do this. Cheers, Al
 
 *Here is the code for QuickAssert so you can use it if you want, without having to get the entire Hotwire codebase*
 
