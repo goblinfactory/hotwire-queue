@@ -2,7 +2,7 @@
 
 ==QuickAssert.cs==
 
-I've just started using Fluent Assertions, (which I love by the way), however, there are some places where I find both the NUnit approach and the Fluent approach results in code that I find is a little cluttered and not very scannable. 
+I've just started using [http://fluentassertions.codeplex.com/ Fluent Assertions], (which I love by the way), however, there are some places where I find both the NUnit approach and the Fluent approach results in code that I find is a little cluttered and not very scannable. 
 
 *QuickAssert.cs is an extension class that allows me to go from this: (fluent style)*
 {{{
