@@ -12,7 +12,7 @@ The core Hotwire enqueue service runs as a HttpModule? under IIS and requires on
 The Uri's that the HttpModule? responds to are configurable in order that Hotwire can be configured to run as part of your existing restful API without requiring that the consumer of your API need know anything about hotwire other than the parameters required for enqueue'ing a request to download and process a document.
 
 **Below is a sample service configuration: (not the whole configuration)**
-```
+```xml
   <hotwire>
     <queues active="true" rootServiceName="demoService" methodValidation="afterUriValidation"> 
       <endpoints>
@@ -26,7 +26,7 @@ The Uri's that the HttpModule? responds to are configurable in order that Hotwir
 
 **Sample folder configuration showing the filesystem based Queue repository:**
 
-```
+```xml
     <folders
         solutionFolderMarkerFile="HotwireSolutionFolderMarkerFile.txt"
         downloadErrorFolder =   "Icodeon.Hotwire.TestAspNet\App_Data\HotwireFolders\DownloadError"
@@ -74,7 +74,8 @@ new : QuickAssert is a test class used to help produce more readable unit tests.
 #### requirements
 * Visual studio 2010 sp1 (Nuget package manager, which comes with sp1 is required in order to use the included packages file. ) If you don't have Nuget, you can still download the assemblies manually.
 The following packages are required in order to build the solution and are included.
-```
+
+```xml
 <packages>
   <package id="NLog" version="2.0.0.0" />
 </packages>
