@@ -44,8 +44,6 @@ The Uri's that the HttpModule? responds to are configurable in order that Hotwir
 
 Note: This codebase does not include any oAuth implementations. In a later update which I will be providing shortly, if you wish to use OAuth authentication then you will need to provide a wrapper for an Oauth provider. Your wrapper must be around whichever OAuth codebase you want to use, and implement IOAuthProvider. As a result building this project using "acceptance test driven development" and of not being able to distribute certain code that are part of the acceptance tests, (but not part of the open source project) I am currently unable to provide any unit tests for this project as well as Oauth authentication. Unit tests are coming soon as a high priority, and if I can get permission from the authors of a certain Oauth provider then I'll be very pleased to include some oauth authenticated tests.
 
-new : QuickAssert is a test class used to help produce more readable unit tests.
-
 #### requirements
 * Visual studio 2010 sp1 (Nuget package manager, which comes with sp1 is required in order to use the included packages file. ) If you don't have Nuget, you can still download the assemblies manually.
 The following packages are required in order to build the solution and are included.
@@ -57,8 +55,6 @@ The following packages are required in order to build the solution and are inclu
 NLog licence is in "/Icodeon.Hotwire.Solution/packages/NLog.2.0.0.0/LICENCE.txt"
 ```
 
-#### [Roadmap - Product Backlog and wishlist](ROADMAP.md)
-
 #### Copyright
 **Copyright (c) Icodeon Limited 2011.**
 
@@ -68,6 +64,11 @@ This project is available free to use in commercial or non-commercial projects u
 
 ---
 
-#### QuickAssert.cs [stupidly simple assertion framework (1 file) I wrote while writing hotwire] (QUICK-ASSERT.md)
+### Product Roadmap
+[Roadmap - Product Backlog and wishlist] (ROADMAP.md)
 
-#### [SAMPLE-TEST.md Sample Acceptance tests with sample test output] (SAMPLE-TEST.md)
+### QuickAssert.cs 
+[stupidly simple assertion framework, 1 file, I wrote while writing hotwire] (QUICK-ASSERT.md)
+
+### SAMPLE-TEST.md
+[Sample Acceptance tests with sample test output] (SAMPLE-TEST.md)
