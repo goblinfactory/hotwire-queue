@@ -1,3 +1,5 @@
+*update 16.03.2015, I've committed a quick update today so that the project will build. (quite a few changes since this project was originally written. It's a quick hack because while I won't use hotwire for writing restful services, (servicestack and webapi, or mvc are much better suited and were not stable or available at the time of writing hotwire). I've updated hotwire so that the project can be cloned and the tests can be run and used as a reference of tests I'm proud of, and enjoyed writing. (All the unit tests should pass, except 2 or 3 I think, that will only pass when run in debug mode as they rely on the built in webserver to start in debug mode.) ;-D*
+
 ### Hotwire is a generalised download and queue workflow for large files:
 
 #### Hotwire project objectives
