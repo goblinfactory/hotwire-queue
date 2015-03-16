@@ -1,6 +1,6 @@
 #### Sample acceptance test 
 
-This is a sample acceptance test showing the style of acceptance testing I used throughout the project. This sample code is the acceptance test I wrote for one part of the simple security layer I implemented for hotwire to prevent man in the middle replay requests.
+This is a sample acceptance test showing the style of acceptance testing I used throughout the project. This sample code is the acceptance test I wrote for one part of the simple security layer I implemented for hotwire to prevent man in the middle replay requests. [This code uses "storyParser" also written and available as part of the hotwire project.](https://github.com/goblinfactory/hotwire-queue/blob/master/V.0.2.4/Icodeon.Hotwire.TestFramework/StoryParser.cs)
 
 The code demonstrates a simple test parameter "parser". I put a great deal of effort into ensuring that test output was very readable, so that the output of tests would be a valuable artifact and could be referred to during discussions with the client, rather than referring to the code itself. 
 
