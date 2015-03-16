@@ -71,4 +71,4 @@ This project is available free to use in commercial or non-commercial projects u
 [stupidly simple assertion framework, 1 file, I wrote while writing hotwire] (QUICK-ASSERT.md)
 
 ### SAMPLE-TEST.md
-[Sample Acceptance tests with sample test output] (SAMPLE-TEST.md)
+[This is a sample acceptance test showing the style of acceptance testing I used throughout the project. This sample code is the acceptance test I wrote for one part of the simple security layer I implemented for hotwire to prevent man in the middle replay requests.] (SAMPLE-TEST.md)
