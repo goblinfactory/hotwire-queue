@@ -4,7 +4,26 @@ This is a sample acceptance test showing the style of acceptance testing I used 
 
 The code demonstrates a simple test parameter "parser". I put a great deal of effort into ensuring that test output was very readable, so that the output of tests would be a valuable artifact and could be referred to during discussions with the client, rather than referring to the code itself. 
 
+**simple scenario DTOs**
+```cs
+
+    public class ScenarioRow
+    {
+        public int SequenceNo { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class RestScenario : ScenarioRow
+    {
+        public Uri Uri { get; set; }
+        public int Response { get; set; }
+        public string ResponseTextToContain { get; set; }
+    }
+
+```
 Below is the test itself, and below that is the console and output that appears in the build and test logs for this test.
+
+```cs
 
         public class ValidMacRequiredIfEndpointIsSecuredRow : RestScenario
         {
@@ -14,7 +33,7 @@ Below is the test itself, and below that is the console and output that appears 
             public bool Signed { get; set; }
         }
 
-```cs
+
         [Test]
         public void ValidMacRequiredIfEndpointIsSecured()
         {
