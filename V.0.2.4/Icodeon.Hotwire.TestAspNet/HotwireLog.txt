@@ -1,0 +1,60 @@
+03/16/2015 20:24:28 PrepareAndProcessRequest() //
+03/16/2015 20:24:28 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:24:28 ::1 requested [GET] 'http://localhost:44144/queues/echo/test.xml'
+03/16/2015 20:24:28 endpoint.Action:ECHO
+03/16/2015 20:24:28 ProcessEchoAction()
+03/16/2015 20:24:28 message:test
+03/16/2015 20:24:28 WriteMediaResponse() //
+03/16/2015 20:24:28 Setting response ContentType to text/xml and writing response
+03/16/2015 20:24:28 // WriteMediaResponse()
+03/16/2015 20:24:28 // PrepareAndProcessRequest()
+03/16/2015 20:26:53 PrepareAndProcessRequest() //
+03/16/2015 20:26:53 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:26:53 127.0.0.1 requested [GET] 'http://localhost:44144/queues/echo/testter.xml'
+03/16/2015 20:26:53 endpoint.Action:ECHO
+03/16/2015 20:26:53 ProcessEchoAction()
+03/16/2015 20:26:53 message:testter
+03/16/2015 20:26:53 WriteMediaResponse() //
+03/16/2015 20:26:53 Setting response ContentType to text/xml and writing response
+03/16/2015 20:26:53 // WriteMediaResponse()
+03/16/2015 20:26:53 // PrepareAndProcessRequest()
+03/16/2015 20:26:59 PrepareAndProcessRequest() //
+03/16/2015 20:26:59 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:26:59 ::1 requested [GET] 'http://localhost:44144/queues/echo/tester.xml'
+03/16/2015 20:26:59 endpoint.Action:ECHO
+03/16/2015 20:26:59 ProcessEchoAction()
+03/16/2015 20:26:59 message:tester
+03/16/2015 20:26:59 WriteMediaResponse() //
+03/16/2015 20:26:59 Setting response ContentType to text/xml and writing response
+03/16/2015 20:26:59 // WriteMediaResponse()
+03/16/2015 20:26:59 // PrepareAndProcessRequest()
+03/16/2015 20:27:08 PrepareAndProcessRequest() //
+03/16/2015 20:27:08 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:27:08 ::1 requested [GET] 'http://localhost:44144/queues/echo/testerz.xml'
+03/16/2015 20:27:08 endpoint.Action:ECHO
+03/16/2015 20:27:08 ProcessEchoAction()
+03/16/2015 20:27:08 message:testerz
+03/16/2015 20:27:08 WriteMediaResponse() //
+03/16/2015 20:27:08 Setting response ContentType to text/xml and writing response
+03/16/2015 20:27:08 // WriteMediaResponse()
+03/16/2015 20:27:08 // PrepareAndProcessRequest()
+03/16/2015 20:28:05 PrepareAndProcessRequest() //
+03/16/2015 20:28:05 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:28:05 ::1 requested [GET] 'http://localhost:44144/queues/echo/testerz.xml'
+03/16/2015 20:28:05 endpoint.Action:ECHO
+03/16/2015 20:28:05 ProcessEchoAction()
+03/16/2015 20:28:05 message:testerz
+03/16/2015 20:28:05 WriteMediaResponse() //
+03/16/2015 20:28:05 Setting response ContentType to text/xml and writing response
+03/16/2015 20:28:05 // WriteMediaResponse()
+03/16/2015 20:28:05 // PrepareAndProcessRequest()
+03/16/2015 20:28:10 PrepareAndProcessRequest() //
+03/16/2015 20:28:10 Module: Icodeon.Hotwire.Framework.Modules.QueueModule v 0.2.4.0
+03/16/2015 20:28:10 ::1 requested [GET] 'http://localhost:44144/queues/echo/1.xml'
+03/16/2015 20:28:10 endpoint.Action:ECHO
+03/16/2015 20:28:10 ProcessEchoAction()
+03/16/2015 20:28:10 message:1
+03/16/2015 20:28:10 WriteMediaResponse() //
+03/16/2015 20:28:10 Setting response ContentType to text/xml and writing response
+03/16/2015 20:28:10 // WriteMediaResponse()
+03/16/2015 20:28:10 // PrepareAndProcessRequest()
