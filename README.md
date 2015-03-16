@@ -46,33 +46,6 @@ Note: This codebase does not include any oAuth implementations. In a later updat
 
 new : QuickAssert is a test class used to help produce more readable unit tests.
 
-#### Roadmap - Product Backlog
-
-* (done 21.05.2011) replace NLog.Logger with LoggerBase? + NullableLogger? implementation. (This will simplify tests as so many classes require Logger. I want to be able to pass in null for the logger during unit tests)
-* (done 23.05.2011) Refactor ModuleBase? (http module base class) so that custom httpModules can be unit testable. Includes wrappers for httpContext, ApplicationState?, and Response)
-* Acceptance tests to serve as project documentation ( I have acceptance tests, but need to sanitise them and bring them into the project)
-* Move roadmap (Product backlog) to Agilezen. (apply for free o/s account).
-* (done, own private CI server) CI Server? Not sure how this will work with an OS project on google code. (make a plan)
-* Unit test for code coverage (same as the acceptance tests.)
-* Folder watcher utility : Monitors folders and processes all enqueued items.
-* Install hotwire via nuget (prerequisite better website, samples and "why use/what problem solve?")
-* Fluent (code) configuration. (Currently hotwire is configured with xml in web.config.) DONE
-* HTML5 front end for monitoring the queue
-* Zero configuration option (Instead of explicitly telling Hotwire that class X in assembly Y implements FileProcess?, I want to use StructureMap? or similar to automatically detect it.) DONE, SUPPORTS MIX, DEFAULTS WITH FLUENT OVERRIDES
-* Support for running hotwire services as a WCF service and/or under MVC. (depending on complexity. Will spike this first and implement whichever is least complex.) INVESTIGATING
-* Implement Queue priority, will include HTML 5 admin tool to pause, requeue and edit queued item priorities.
-* Email notification of fileProcess errors. DONE
-* Use a configurable "pipeline" of process steps instead of a set of the existing hard coded folders. (this will remove a lot of code duplication in the filesProvider).
-* Support multiple fileprocessors, and be able to specify which file processor processes which configured "endpoint".
-* Endpoint to be mapped to a named, configured pipeline (or "named" set of directories).
-* Use Structuremap or other dependancy injection framework. (was originally excluded from this project due to possible Open source licence challenges. need to review and if OK will use).
-* Integration with Elmah or similar for unhandled error notification. Check licence compatibility, requirements etc. DONE
-* replace filesProvider with pluggable provider and use database instead of file system.
-
-#### Wishlist
-* Contact Oauth authors and see if I can get permission to include assembly in a ready-to-use built download.
-* Contact GB and see if Microsoft will allow us to include Microsoft.Http in a download as this will make testing so much neater and simpler.
-
 #### requirements
 * Visual studio 2010 sp1 (Nuget package manager, which comes with sp1 is required in order to use the included packages file. ) If you don't have Nuget, you can still download the assemblies manually.
 The following packages are required in order to build the solution and are included.
@@ -84,6 +57,8 @@ The following packages are required in order to build the solution and are inclu
 NLog licence is in "/Icodeon.Hotwire.Solution/packages/NLog.2.0.0.0/LICENCE.txt"
 ```
 
+#### [Roadmap - Product Backlog and wishlist](ROADMAP.md)
+
 #### Copyright
 **Copyright (c) Icodeon Limited 2011.**
 
@@ -93,57 +68,6 @@ This project is available free to use in commercial or non-commercial projects u
 
 ---
 
-#### QuickAssert.cs ( stupidly simple assertion framework (1 file) I wrote while writing hotwire )
+#### QuickAssert.cs [stupidly simple assertion framework (1 file) I wrote while writing hotwire] (QUICK-ASSERT.md)
 
-I've just started using Fluent Assertions, (which I love by the way), however, there are some places where I find both the NUnit approach and the Fluent approach results in code that I find is a little cluttered and not very scannable.
-
-QuickAssert.cs is an extension class that allows me to go from this: (fluent style)
-
-```cs
-config.Active.Should().BeTrue();
-config.RootServiceName.Should().Be("test-animals");
-config.MethodValidation.Should().Be(MethodValidation.afterUriValidation);
-var endpoints = config.Endpoints;
-endpoints.Should().NotBeNull().And.HaveCount(2);
-```
-
-to this:
-
-```cs
-config.Ensure(c => c.Active,
-              c => c.RootServiceName == "test-animals",
-              c => c.MethodValidation == MethodValidation.afterUriValidation,
-              c => c.Endpoints != null && c.Endpoints.Count() == 2);
-```
-
-QuickAssert also fails (if error is detected) and outputs the text representation of the exact code used to check the property, without having to provide a string description. This is not a replacement for Fluent assertions, which will do a better job of expressing very complex requirements. This is for when I need something simple, e.g. checking long lists of properties. I may simply be using Fluent Assertions properly, so please send me comments if there is a better way to do this. Cheers, Al
-
-**Here is the code for QuickAssert so you can use it if you want, without having to get the entire Hotwire codebase**
-
-```cs
-using System;
-using System.Linq.Expressions;
-using NUnit.Framework;
-
-namespace Icodeon.Hotwire.Tests.Framework
-{
-    public static class QuickAssert
-    {
-        public static void Ensure<TSource>(this TSource source, params Expression<Func<TSource, bool>>[] actions)
-        {
-            foreach (var expression in actions)
-            {
-                Ensure(source,expression);
-            }
-        }
-
-        public static void Ensure<TSource>(this TSource source, Expression<Func<TSource, bool>> action)
-        {
-            var propertyCaller = action.Compile();
-            bool result = propertyCaller(source);
-            if (result) return;
-            Assert.Fail("Property check failed -> " + action.ToString());
-        }
-    }
-}
-```
+#### [SAMPLE-TEST.md Sample Acceptance tests with sample test output] (SAMPLE-TEST.md)
