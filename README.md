@@ -67,7 +67,11 @@ This project is available free to use in commercial or non-commercial projects u
 ### Product Roadmap
 [Roadmap - Product Backlog and wishlist] (ROADMAP.md)
 
-#### QuickAssert.cs ( stupidly simple assertion framework (1 file) I wrote while writing hotwire )
+---
+
+# QuickAssert.cs 
+
+### stupidly simple assertion framework (1 file) I wrote while writing hotwire
 
 I've just started using Fluent Assertions, (which I love by the way), however, there are some places where I find both the NUnit approach and the Fluent approach results in code that I find is a little cluttered and not very scannable.
 
@@ -121,9 +125,10 @@ namespace Icodeon.Hotwire.Tests.Framework
     }
 }
 ```
+---
 
+### SAMPLE-TEST
 
-### SAMPLE-TEST.md
-[This is a sample acceptance test showing the style of acceptance testing I used throughout the project. This sample code is the acceptance test I wrote for one part of the simple security layer I implemented for hotwire to prevent man in the middle replay requests.] (SAMPLE-TEST.md)
+[This is a sample acceptance test showing the style of acceptance testing I used throughout the project. This sample code is the acceptance test I wrote for one part of the simple security layer I implemented for hotwire to prevent man in the middle replay requests.] 
 
 
